@@ -18,4 +18,6 @@ def index(request):
         stop_time=request.POST.get('analyse_at_to')
         index=request.POST.get('index')
         result=analyse.analyse(start_time,stop_time,index)
-        return HttpResponse(result)
+        result=result.split('\n')
+        print(result)
+        return HttpResponse(json.dumps(result))
