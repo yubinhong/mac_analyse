@@ -2,7 +2,6 @@ from django.shortcuts import render,HttpResponse
 
 # Create your views here.
 import json
-from web import utils
 import requests
 from backend import analyse
 def index(request):
