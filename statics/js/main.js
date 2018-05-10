@@ -3,15 +3,8 @@
  */
 
 function confirmAct(){
-    //var action=action;
-    $('#form1').data('bootstrapValidator').validate();//手动对表单进行校检
-    if (!$('#form1').data('bootstrapValidator').isValid()) {//判断校检是否通过
-        // alert("验证不通过");
-        return;
-    }else {
         showMask();
         return manage();
-    }
 }
 
 function manage() {

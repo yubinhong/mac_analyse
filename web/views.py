@@ -4,6 +4,8 @@ from django.shortcuts import render,HttpResponse
 import json
 import requests
 from backend import analyse
+
+
 def index(request):
     if request.method=='GET':
         API="http://192.168.100.3:9200/_cat/indices?pretty"
