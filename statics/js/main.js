@@ -25,7 +25,6 @@ function manage() {
             $.each(advisor_list,function (index,item) {
                 html_ele +='<p>'+item+'</p>';
             });
-            console.log(html_ele);
             $('#advisor').html(html_ele);
             $('#myModal').modal('show');
             $("#btn2").removeClass('hide');
