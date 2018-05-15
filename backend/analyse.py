@@ -20,7 +20,7 @@ data={}
 data['new']={}
 data['act']={}
 result="/root/analyse.txt"
-ela_api="http://%s:%s/%s/_doc/_search?pretty" % (host,port,index)
+
 ############################
 def datetimetotimestamp(datetime):
     timestamp = int(time.mktime(time.strptime(datetime, '%Y-%m-%d')))
@@ -68,6 +68,7 @@ def get_data_by_ela(is_new,start_time,stop_time):
         },
         "size": 1000000
     }
+    ela_api = "http://%s:%s/%s/_doc/_search?pretty" % (host, port, index)
     req=requests.get(ela_api, headers=headers, data=json.dumps(pay_load))
     result_list = [x['_source']['mac'] for x in req.json()['hits']['hits']]
     return result_list
